@@ -1,0 +1,80 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header{
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+    background-color: brown;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 50px;
+}
+.logo img{
+    height: 40px;
+    width: 80px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+ul li{
+    display: inline-block;
+    letter-spacing: 2px;
+}
+ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: large;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 60px;  /* Smaller logo on tablets */
+        height: 30px;
+    }
+
+    ul {
+        gap: 15px; /* Reduced gap for list items */
+    }
+
+    ul li a {
+        font-size: medium; /* Smaller font size */
+    }
+}
+
+@media (max-width: 580px) {
+    header {
+        flex-direction: column; /* Stack logo and navigation vertically */
+        padding: 0; /* Remove padding to prevent brown background on sides */
+    }
+
+    nav {
+        width: 100%; /* Full width to cover any gap */
+        padding: 10px 0; /* Add vertical padding if needed */
+        background-color: rgb(255 80 80 / 80%); /* Maintain this color full width */
+    }
+    .logo img {
+        margin: 10px auto; /* Center logo with automatic horizontal margins */
+        width: 50px; /* Even smaller logo on mobile */
+        height: 25px;
+    }
+
+    ul {
+        width: 100%; /* Ensure ul covers full width */
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center align links */
+        gap: 10px; /* Smaller gap */
+    }
+    ul li a {
+        font-size: small; /* Smaller text for mobile readability */
+        display: block; /* Ensure links take full width of li */
+        padding: 10px 20px; /* Adequate padding for touch targets */
+    }
+}
